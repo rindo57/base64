@@ -1,0 +1,178 @@
+body {
+			background-color: black;
+			color: #33ff33;
+			font-family: "Courier New", Courier, monospace;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start; /* Top aligned content */
+			min-height: 80vh; /* Reduced height */
+			overflow: hidden;
+			box-sizing: border-box;
+		}
+
+
+        h1 {
+            color: #00ff00;
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            position: relative;
+            z-index: 10;
+			font-weight: bold;
+        }
+
+        .container {
+			width: 90%;
+			max-width: 800px;
+			height: 500px; /* Fixed height for container */
+			border: 2px solid #33ff33;
+			padding: 20px;
+			background-color: rgba(0, 0, 0, 0.8);
+			position: relative;
+			z-index: 10;
+			box-sizing: border-box;
+			overflow: auto; /* Add scrolling if content overflows */
+		}
+
+
+        .tool {
+            margin-bottom: 2em;
+            width: 100%;
+        }
+
+        input,
+        button,
+        textarea {
+            background-color: black;
+            color: #33ff33;
+            border: 1px solid #33ff33;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+            font-family: "Courier New", Courier, monospace;
+            box-sizing: border-box;
+        }
+
+        button {
+            cursor: pointer;
+            width: 100%;
+			background-color: #120a14;
+			box-shadow: 0 2px 3px rgba(255, 255, 255);
+			font-weight: bold;
+        }
+
+        textarea {
+            resize: none;
+            height: 120px;
+			padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .output-box {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .copy-btn {
+            background-color: hsl(0, 30, 255); 
+			color: white;
+            border: 1px solid #ffffff;
+            margin-top: 10px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .copy-btn:hover {
+            background-color: yellow;
+			box-shadow: 2px 4px white;
+			color: black;
+			border-color: #ffff;
+        }
+		
+		/* Styling for the alert box */
+		.alert-box {
+			display: none;
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			border-radius: 5px;
+			font-size: 16px;
+			text-align: center;
+			width: 300px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			opacity: 0;
+			transition: opacity 0.5s ease;
+
+			/* Center the alert box */
+			position: fixed; /* Ensure it stays in place */
+			top: 85%; /* Center vertically */
+			left: 50%; /* Center horizontally */
+			transform: translate(-50%, -50%); /* Adjust for perfect centering */
+			z-index: 1000; /* Ensure it appears above other elements */
+		}
+
+			/* Display alert box when active */
+			.alert-box.show {
+				display: block;
+				opacity: 1;
+		}
+		
+		#matrix {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.5;
+        }
+
+        .music-control {
+            position: absolute;
+            bottom: 10px;
+            ..left: 10px;
+            z-index: 10;
+            color: white;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .music-control button {
+            background-color: #333;
+            color: #33ff33;
+            border: 1px solid #33ff33;
+            padding: 10px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .music-control button:hover {
+            background-color: #555;
+        }
+
+        /* Media queries for responsive design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            l.container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            linput,
+            button,
+            textarea {
+                font-size: 14px;
+            }
+
+            l.copy-btn {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
