@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="WOODcraft SudoR2spr" />
+    <meta name="keywords" content="WDzone, WDZONE, Base64, encoded, code, Code" />
+    <meta name="description" content="WDZONE Website Service How to use the Base64 encoded code." />
+    <meta property="og:description" content="WDZONE Website Service How to use the Base64 encoded code.">
+    <meta charset='utf-8' content='text/html' http-equiv='content-type' />
+    <meta content='https://i.imgur.com/MDgFhvL.png' property='og:image' />
+    <link href='https://i.imgur.com/MDgFhvL.png' rel='shortcut icon' type='image/vnd.microsoft.icon' />
+    <link href='https://i.imgur.com/MDgFhvL.png' rel='apple-touch-icon' />	
+	<link rel="icon" href="https://i.imgur.com/1H9ZSvn.png" type="image/x-icon" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Python Tool - Base64 Encoder/Decoder</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h1><i class="fa fa-file-code-o" aria-hidden="true"></i> 𝗕𝗮𝘀𝗲64 𝗘𝗻𝗰𝗼𝗱𝗲𝗿/𝗗𝗲𝗰𝗼𝗱𝗲𝗿</h1>
+    <div class="container">
+        <div class="tool">
+            <textarea id="base64Input" rows="3" placeholder="Enter text to encode or decode"></textarea>
+            <button onclick="encodeBase64()"><i class="fa fa-code" aria-hidden="true"></i> 𝗘𝗻𝗰𝗼𝗱𝗲 𝘁𝗼 𝗕𝗮𝘀𝗲64</button>
+            <button onclick="decodeBase64()"><i class="fa fa-code" aria-hidden="true"></i> 𝗗𝗲𝗰𝗼𝗱𝗲 𝗳𝗿𝗼𝗺 𝗕𝗮𝘀𝗲64</button>
+            <button onclick="clearFields()"><i class="fa fa-trash" aria-hidden="true"></i> 𝗖𝗹𝗲𝗮𝗿</button>
+
+            <div class="output-box">
+                <p id="base64Result"></p>
+                <button class="copy-btn" onclick="copyToClipboard()"><i class="fa fa-clone" aria-hidden="true"></i> 𝗖𝗼𝗽𝘆 𝘁𝗼 𝗖𝗼𝗱𝗲</button>
+            </div>
+        </div>
+    </div>
+	<!-- Alert message box (Initially hidden) -->
+<div id="alertBox" class="alert-box">
+    Successfully copied. 
+</div>
+
+    <canvas id="matrix"></canvas>
+
+    <div class="music-control">
+        <button onclick="toggleMusic()"><i class="fa fa-play" aria-hidden="true"></i> Play/Pause Music <i class="fa fa-pause" aria-hidden="true"></i> By Someone</button>
+    </div>
+</div>
+    <script src="main.js"></script>
+</body>
+
+</html>
